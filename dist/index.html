@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan Script" />
+
+    <script src="https://kit.fontawesome.com/eb858c52f5.js"></script>
+
+    <script src="main.js"></script>
+
+    <title>SkyBlog Builder</title>
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <div id="menu">
+      <ul>
+        <li>
+          <a id="headerText">SkyBlog Builder</a>
+        </li>
+      </ul>
+    </div>
+    <div id="pageOne" class="firstPage pages">
+      <div id="line"></div>
+      <div id="title">
+        <h1 id="titleText">Welcome</h1>
+      </div>
+      <div id="description">
+        <p id="descriptiveText">
+          Welcome to SkyBlog Builder, a Skynet application with a user-friendly interface for
+          designing and deploying blog posts on Skynet. Absolutely no programming knowledge is
+          necessary to publish your blog post - all that is required is an idea! As an added bonus,
+          once the application deploys your blog post, you will have two options: either keep the
+          Skynet link or use your own handshake domain! Happy SkyBlogging :)
+        </p>
+      </div>
+      <div id="instructions">
+        <p id="moveForward">
+          To proceed to the next section click the button in the bottom right hand corner
+          <br />
+        </p>
+        <p id="moveBack">
+          To return to the previous section click the button in the bottom left hand corner
+        </p>
+      </div>
+    </div>
+    <!-- <div id="pageTwo" class="pages">
+			<div id="line">
+			</div>
+			<div id="title">
+				<h1 id="titleText">Requirements!</h1>
+			</div>
+			<div class="requirementDescription">
+				<p class="requirementText">
+				In order to create your blog post, there are a few steps you must take prior to designing and publishing it.
+				</p>
+			</div>
+			<div class="task">
+				<div class="number">
+					<p>1</p>
+				</div>
+				<div class="taskDescription">
+					<p class="taskText">
+					To publish your blog post with a Handshake name, you will first need to have a Handshake name. To do this, the Namebase Learning Center provides excellent instructions for obtaining Handshake TLDs with Namebase.io. It can be accessed <a href="https://learn.namebase.io/starting-from-zero/how-to-get-a-name">here</a>.
+					</p>
+				</div>
+			</div>
+			<div class="requirementDescription">
+				<p class="requirementText">
+				Once you have completed the above task(s), you are ready to move on to designing your blog post!
+				</p>
+			</div>
+		</div> -->
+    <div id="pageThree" class="pages">
+      <div id="line"></div>
+      <div id="title">
+        <h1 id="titleText">Design your blog post!</h1>
+      </div>
+      <div id="buildDescription">
+        <p id="buildText">
+          Fill out the options below to customize your blog post. Instructions for each field are
+          provided where necessary. <br />A preview of your final blog post is located at the bottom
+          of this page which updates with every entry you provide!
+        </p>
+      </div>
+      <div id="customOptions">
+        <div class="Category" id="op1">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Header Background Color</h2>
+            <p class="CategorySubtitle">Please insert a Hex code (i.e. #9A8C98)</p>
+          </div>
+          <input type="text" id="headerColor" name="headerColor" value="#81b29a" />
+        </div>
+        <div class="Category" id="op2">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Title of Article</h2>
+          </div>
+          <textarea rows="5" cols="60" id="articleTitle" name="articleTitle"></textarea>
+        </div>
+        <div class="Category" id="op3">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Text Color of Title</h2>
+            <p class="CategorySubtitle">Please insert a Hex code (i.e. #9A8C98)</p>
+          </div>
+          <input type="text" id="titleColor" name="titleColor" value="#f4f1de" />
+        </div>
+        <div class="Category" id="op4">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Page Background Color</h2>
+            <p class="CategorySubtitle">Please insert a Hex code (i.e. #9A8C98)</p>
+          </div>
+          <input type="text" id="pageColor" name="pageColor" value="#f4f1de" />
+        </div>
+        <div class="Category" id="op5">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Author Name</h2>
+          </div>
+          <input type="text" id="authorName" name="authorName" />
+        </div>
+        <div class="Category" id="op6">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Text Color of Author Name</h2>
+            <p class="CategorySubtitle">Please insert a Hex code (i.e. #9A8C98)</p>
+          </div>
+          <input type="text" id="authorColor" name="authorColor" value="#e07a5f" />
+        </div>
+        <div class="Category" id="op7">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Color of Divider between Author and Date</h2>
+            <p class="CategorySubtitle">Please insert a Hex code (i.e. #9A8C98)</p>
+          </div>
+          <input type="text" id="dividerColor" name="dividerColor" value="#e07a5f" />
+        </div>
+        <div class="Category" id="op8">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Publishing Date</h2>
+          </div>
+          <input type="text" id="publishingDate" name="publishingDate" />
+        </div>
+        <div class="Category" id="op9">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Text Color of Publishing Date</h2>
+            <p class="CategorySubtitle">Please insert a Hex code (i.e. #9A8C98)</p>
+          </div>
+          <input type="text" id="dateColor" name="dateColor" value="#e07a5f" />
+        </div>
+        <div class="Category" id="op10">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Content</h2>
+            <p class="CategorySubtitle">Copy and paste the content of your post below</p>
+          </div>
+          <textarea rows="10" cols="80" id="pageContent" name="pageContent"></textarea>
+        </div>
+        <div class="Category" id="op11">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Text Color of Content</h2>
+            <p class="CategorySubtitle">Please insert a Hex code (i.e. #9A8C98)</p>
+          </div>
+          <input type="text" id="contentColor" name="contentColor" value="#3d405b" />
+        </div>
+      </div>
+      <h1 id="previewHeader">Preview of Final Blog Post:</h1>
+      <div id="preview">
+        <iframe id="previewFrame" src="PreviewTest.html"></iframe>
+      </div>
+      <div id="submitBlog">
+        <button type="button" id="blogButton" onclick="makeFile()">Generate Blog Post</button>
+      </div>
+    </div>
+
+    <!-- <div id="pageFour" class="lastPage pages">
+      <div id="line"></div>
+      <div id="title">
+        <h1 id="titleText">Using a Handshake Name</h1>
+      </div>
+      <div class="requirementDescription" id="fourthPageReqDescription">
+        <p class="requirementText">
+          To use your handshake name, you will need to modify the DNS records for it. In the
+          following steps I will guide you through this process!
+        </p>
+      </div>
+      <div id="customOptions">
+        <div class="Category" id="customskylink">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Your Skylink:</h2>
+          </div>
+          <input type="text" id="valueOfSkylink" name="headerColor" value="" />
+        </div>
+        <div class="Category" id="op2">
+          <div class="CategoryText">
+            <h2 class="CategoryHeader">Your Handshake Name:</h2>
+          </div>
+          <input type="text" id="handshakeName" name="handshakeName" />
+        </div>
+      </div>
+      <div class="hnstask">
+        <ol>
+          <li class="taskText">
+            Fill out the above fields (the first should be filled out for you) and then log into
+            your <a href="https://www.namebase.io/">Namebase</a> account. On your dashboard, you
+            should see a box labeled 'Your Domains'. In this box should be a list of your domains
+            (if you don't see them all, you may need to click 'Manage All'). Next to the domain you
+            want to use, click the blue 'Edit DNS' link.
+          </li>
+          <li class="taskText">
+            Scroll down to the 'Blockchain DNS records' category and click 'Add new record' (note:
+            this transaction will have a small cost).
+          </li>
+          <li class="taskText">
+            For the type, select TXT. For the value/data, paste the following: <a id="Skylink"></a>
+          </li>
+          <li class="taskText">Click save and wait for your changes to finish syncing</li>
+        </ol>
+      </div>
+      <div class="requirementDescription">
+        <p class="requirementText" id="finalText">
+          You can now access your website at the following url:<br />
+        </p>
+        <p class="requirementText">
+          <a id="finalBlogLink" href="https://siasky.net/hns/">https://siasky.net/hns/</a>
+        </p>
+      </div>
+    </div> -->
+
+    <div id="flipper">
+      <div id="leftflipper">
+        <a onclick="pageBack()"
+          ><i class="fa fa-arrow-circle-left" id="leftFlipIcon" aria-hidden="true"></i
+        ></a>
+      </div>
+      <div id="rightflipper">
+        <a onclick="pageForward()"
+          ><i class="fa fa-arrow-circle-right" id="rightFlipIcon" aria-hidden="true"></i
+        ></a>
+      </div>
+    </div>
+    <div id="PopUpWrapper">
+      <div id="PopUpDiv">
+        <h1>Your Blog Post is ready!</h1>
+        <p>
+          Click the link below to view your site
+          <br />
+          <a id="SkynetLink">loading...(you may need to hover over me!)</a><br /><br />
+        </p>
+        <p>
+          Be sure to save your link. If you would like to use your Handshake name, close this window
+          and continue to the next page!
+        </p>
+        <button id="closeButton" onclick="closeButton()">Close</button>
+      </div>
+    </div>
+  </body>
+</html>
