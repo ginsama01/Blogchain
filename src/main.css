@@ -68,7 +68,6 @@ body {
   font-family: 'Raleway';
   color: #3d405b;
   line-height: 1.5;
-  font-style: italic;
   text-align: center;
   display: block;
 }
@@ -366,4 +365,12 @@ body {
 }
 #Skylink {
   color: #e07a5f;
+}
+
+.upload {
+  text-align: center !important;
+}
+
+.upload:hover {
+  cursor: pointer;
 }

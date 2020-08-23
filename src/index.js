@@ -1,8 +1,9 @@
 import './main.css';
 
 import { SkynetClient } from 'skynet-js';
-
+import Arweave from 'arweave';
 const client = new SkynetClient();
+const arweave = Arweave.init();
 
 window.createBlogPage = function (blogPost, backgroundColor, title) {
   const toUpload =
@@ -197,6 +198,46 @@ window.switchPage = function () {
   pages[counter].style.display = 'block';
   if (counter == 1) {
     updatePrev();
+  }
+};
+
+window.login = (event) => {
+  event.stopPropagation();
+  event.preventDefault();
+  var fr = new FileReader();
+  fr.onload = function (ev) {
+    try {
+      let wallet = JSON.parse(ev.target.result);
+      localStorage.setItem('wallet', JSON.stringify(wallet));
+      let login = document.getElementById('moveBack');
+      arweave.wallets.jwkToAddress(wallet).then((address) => {
+        login.innerHTML = '';
+        let para = document.createElement('P');
+        para.innerHTML = 'Hello ' + address;
+        login.appendChild(para);
+      });
+      document.getElementById('rightflipper').style.display = 'block';
+    } catch (err) {
+      alert('Error logging in: ' + err);
+    }
+  };
+  fr.readAsText(event.target.files[0]);
+};
+
+window.load = () => {
+  console.log('load');
+  let wallet = JSON.parse(localStorage.getItem('wallet'));
+  if (wallet) {
+    window.loggedIn = true;
+    let login = document.getElementById('moveBack');
+    arweave.wallets.jwkToAddress(wallet).then((address) => {
+      login.innerHTML = '';
+      let para = document.createElement('P');
+      para.innerHTML = 'Hello ' + address;
+      login.appendChild(para);
+    });
+  } else {
+    document.getElementById('rightflipper').style.display = 'none';
   }
 };
 

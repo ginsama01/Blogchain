@@ -9,14 +9,14 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan Script" />
-
+    <script src="https://unpkg.com/arweave/bundles/web.bundle.js"></script>
     <script src="https://kit.fontawesome.com/eb858c52f5.js"></script>
 
     <script src="main.js"></script>
 
     <title>SkyBlog Builder</title>
   </head>
-  <body>
+  <body onload="load()">
     <script src="main.js"></script>
     <div id="menu">
       <ul>
@@ -44,9 +44,14 @@
           To proceed to the next section click the button in the bottom right hand corner
           <br />
         </p>
-        <p id="moveBack">
-          To return to the previous section click the button in the bottom left hand corner
-        </p>
+        <div id="moveBack">
+          <label class="upload">
+            <img src="login.png" />
+            Login...
+            <input type="file" style="visibility: hidden;" id="login" onchange="login(event)" />
+          </label>
+        </div>
+        <br />
       </div>
     </div>
     <!-- <div id="pageTwo" class="pages">
