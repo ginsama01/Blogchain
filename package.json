@@ -1,7 +1,7 @@
 {
-  "name": "skyblogbuilder",
+  "name": "arblogbuilder",
   "version": "1.0.0",
-  "description": "Skynet app to design and deploy a blog post to Skynet with the option of using a handshake domain",
+  "description": "",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,6 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "arweave": "^1.9.1",
-    "skynet-js": "^0.1.0"
+    "arweave": "^1.9.1"
   }
 }
