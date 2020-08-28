@@ -44,10 +44,17 @@
           <br />
         </p>
         <div id="moveBack">
-          <label class="upload">
+          <label class="upload" id="loginLabel">
             <img src="login.png" />
             Login...
             <input type="file" style="visibility: hidden" id="login" onchange="login(event)" />
+          </label>
+        </div>
+        <br />
+        <div id="logOut" style="display: none">
+          <label class="logout">
+            <img src="login.png" />
+            <a onclick="logout()"> Logout </a>
           </label>
         </div>
         <br />

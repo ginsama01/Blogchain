@@ -370,3 +370,13 @@ body {
 .upload:hover {
   cursor: pointer;
 }
+
+.logout {
+  display: block;
+  text-align: center;
+  line-height: 150%;
+}
+
+.logout:hover {
+  cursor: pointer;
+}

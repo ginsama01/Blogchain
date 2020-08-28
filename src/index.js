@@ -196,10 +196,14 @@ var counter = 0;
 window.pageBack = function () {
   counter--;
   switchPage();
+  document.getElementById('leftflipper').style.display = 'none';
+  document.getElementById('rightflipper').style.display = 'block';
 };
 window.pageForward = function () {
   counter++;
   switchPage();
+  document.getElementById('rightflipper').style.display = 'none';
+  document.getElementById('leftflipper').style.display = 'block';
 };
 
 window.switchPage = function () {
@@ -229,12 +233,15 @@ window.login = (event) => {
       localStorage.setItem('wallet', JSON.stringify(wallet));
       let login = document.getElementById('moveBack');
       arweave.wallets.jwkToAddress(wallet).then((address) => {
-        login.innerHTML = '';
+        document.getElementById('loginLabel').style.display = 'none';
         let para = document.createElement('P');
         para.innerHTML = 'Hello ' + address;
+        para.style.fontWeight = 'bold';
+        para.id = 'hello';
         login.appendChild(para);
       });
       document.getElementById('rightflipper').style.display = 'block';
+      document.getElementById('logOut').style.display = 'block';
     } catch (err) {
       alert('Error logging in: ' + err);
     }
@@ -242,17 +249,25 @@ window.login = (event) => {
   fr.readAsText(event.target.files[0]);
 };
 
+window.logout = () => {
+  localStorage.removeItem('wallet');
+  location.reload();
+};
+
 window.load = () => {
-  console.log('load');
+  document.getElementById('leftflipper').style.display = 'none';
   let wallet = JSON.parse(localStorage.getItem('wallet'));
   if (wallet) {
     window.loggedIn = true;
     let login = document.getElementById('moveBack');
     arweave.wallets.jwkToAddress(wallet).then((address) => {
-      login.innerHTML = '';
+      document.getElementById('loginLabel').style.display = 'none';
       let para = document.createElement('P');
       para.innerHTML = 'Hello: ' + address;
+      para.style.fontWeight = 'bold';
+      para.id = 'hello';
       login.appendChild(para);
+      document.getElementById('logOut').style.display = 'block';
     });
   } else {
     document.getElementById('rightflipper').style.display = 'none';
