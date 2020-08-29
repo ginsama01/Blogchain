@@ -51,19 +51,6 @@ window.createBlogPage = function (blogPost, backgroundColor, title) {
   } catch (e) {
     console.log(e);
   }
-
-  // try {
-  //   (async () => {
-  //     const { skylink } = await client.uploadDirectory(blogFile, 'blogFile');
-  //     let displayLink = '/' + skylink + '/';
-  //     document.getElementById('SkynetLink').href = 'https://siasky.net' + displayLink;
-  //     document.getElementById('SkynetLink').text = 'https://siasky.net' + displayLink;
-  //     document.getElementById('valueOfSkylink').value = 'https://siasky.net' + displayLink;
-  //     document.getElementById('Skylink').innerHTML = skylink;
-  //   })();
-  // } catch (error) {
-  //   alert(error);
-  // }
 };
 
 window.makeFile = function () {
@@ -289,8 +276,6 @@ document.addEventListener('keyup', (event) => {
   }
   if (document.getElementById('pageFour').style.display == 'block') {
     var toUpdate = document.getElementById('finalBlogLink');
-    toUpdate.href = 'https://siasky.net/hns/' + document.getElementById('handshakeName').value;
-    toUpdate.innerHTML = 'https://siasky.net/hns/' + document.getElementById('handshakeName').value;
   }
 });
 
