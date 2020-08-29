@@ -9,7 +9,7 @@
 
 ## Example Blog Post
 
-[ArBlog](https://siasky.net/hns/concentrativemovementtherapy/)
+[ArBlog](https://arweave.net/Ik44tGPyyiivP5uAS4dqE8VM0QPZQdt2OdOxbXdWIbU)
 
 ## Setup
 
